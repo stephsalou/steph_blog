@@ -1,0 +1,43 @@
+.gradient-custom {
+  background: #3a7bd5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3a6073, #3a7bd5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#3a6073), to(#3a7bd5));
+  background: -webkit-linear-gradient(left, #3a6073, #3a7bd5);
+  background: -o-linear-gradient(left, #3a6073, #3a7bd5);
+  background: linear-gradient(to right, #3a6073, #3a7bd5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card-comments img {
+  width: 4rem;
+}
+
+.navbar .navbar-light .navbar-nav .nav-item .active > .nav-link {
+  background-color: rgba(52, 86, 103, 0.1) !important;
+}
+.navbar .navbar-light .navbar-nav .nav-item .active > .nav-link:hover {
+  background-color: rgba(58, 96, 115, 0.1) !important;
+}
+
+.link-act > .nav-link {
+  background-color: rgba(52, 86, 103, 0.1) !important;
+}
+.link-act > .nav-link:hover {
+  background-color: rgba(58, 96, 115, 0.1) !important;
+}
+
+.img-responsive {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.nav-link {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: red;
+}
+.nav-link:hover {
+  color: #FFF;
+}

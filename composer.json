@@ -1,0 +1,28 @@
+{
+  "name": "phanou/ankh_blog",
+  "description": "blog dedier a la culture Africaine",
+  "type": "project",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "stephane salou",
+      "email": "technichal@npz.ci"
+    }
+  ],
+  "minimum-stability": "beta",
+  "require": {
+    "guzzlehttp/guzzle": "^6.3",
+    "symfony/var-dumper": "^4.3@beta"
+  },
+  "autoload": {
+    "psr-4": {
+      "steph\\db_query\\": "vendor/steph/db_query/src",
+      "tebazil\\dbseeder\\": "vendor/tebazil/db-seeder/src",
+      "_classes\\": "_classes/",
+      "App\\": "vendor/router/src",
+      "App\\Controller\\": "controllers",
+      "Model\\": "models"
+      //"Faker": "vendor/fzaninotto/Faker/src/Faker"
+    }
+  }
+}
