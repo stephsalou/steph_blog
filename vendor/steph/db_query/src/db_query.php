@@ -197,16 +197,16 @@ class db_query
         return $this;
     }
 
-    public function update(string $table, string $data_column,array $value):object
+    public function update(string $table, string $data_column,array $values):object
     {
         if ($this->sql == '') {
             $this->sql = 'update ' . $table . ' ';
             $arr = explode(',', $data_column);
-            foreach ($arr as $keys => $value) {
+            foreach ($arr as $keys => $val) {
                 if ($keys == 0) {
-                    $this->sql .= 'SET ' . $value . '=? ';
+                    $this->sql .= "SET " . $val . "=$values[$keys] ";
                 } else {
-                    $this->sql .= ', ' . $value . '=? ';
+                    $this->sql .= ", " . $val . "=$values[$keys] ";
                 }
             }
         } else {
@@ -226,6 +226,7 @@ class db_query
             $err = $this->Error(NO_EMPTY_STRING_ACCEPT, 'must have a sql query to run it');
             throw $err;
         }
+        $this->sql='';
         return $this;
     }
 
@@ -248,6 +249,7 @@ class db_query
                 throw $err;
             }
         }
+        $this->sql='';
         return $this;
     }
 
@@ -260,6 +262,7 @@ class db_query
             $err = $this->Error(NO_EMPTY_STRING_ACCEPT, 'must have a sql query to run it');
             throw $err;
         }
+        $this->sql='';
         return $this;
     }
 
